@@ -1,0 +1,23 @@
+{
+  "name": "ocean-hackathon-eolien-backend",
+  "version": "1.0.0",
+  "description": "express js api that handle user connexion and voting",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donnico/Ocean-hackathon-eolien-backend.git"
+  },
+  "author": "Nicolas LECLERCQ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donnico/Ocean-hackathon-eolien-backend/issues"
+  },
+  "homepage": "https://github.com/donnico/Ocean-hackathon-eolien-backend#readme",
+  "dependencies": {
+    "express": "4.18.2"
+  }
+}
