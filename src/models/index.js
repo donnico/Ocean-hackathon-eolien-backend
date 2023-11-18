@@ -12,7 +12,7 @@ const db = {};
 db.Sequelize = Sequelize;
 db.connection = sequelize;
 
-db.users = require('./users.js')(db.connection, db.Sequelize)
-Sequelize
+db.user = require('./users.js')(db.connection, db.Sequelize)
+db.vote = require('./votes.js')(db.connection, db.Sequelize)
 
 module.exports = db;

@@ -1,8 +1,4 @@
 const { DataTypes, Model } = require('sequelize');
-// const sequelize = new Sequelize('ocean-hackathon-eolien', 'postgres', 'ocean', {
-//     host: 'localhost',
-//     dialect: 'postgres'
-//   });
 
 class User extends Model {}
 

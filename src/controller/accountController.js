@@ -1,6 +1,5 @@
 const db = require("../models");
-const User = db.users;
-// const where = db.Sequelize.where;
+const User = db.user;
 
 async function findUserByEmail(email) {
     try {
@@ -30,6 +29,7 @@ exports.register = (req, res) => {
 
     User.create(newUser)
     .then(data => {
+        console.log(data);
       res.send({
           message: "Signup Successful!"
       });
@@ -68,6 +68,26 @@ exports.login = async (req, res) => {
             res.status(403).send({
                 message: "Invalid Credentails!"
             });
+        }
+    }
+
+    exports.profile = async (req, res) => {
+        console.log(req.body);
+        if(!req.body.email, !req.body.password) {
+            res.status(400).send({
+                message: 'Please provide all the fields.'
+            });
+            return;
+        }
+    
+        // Log in
+        user = await findUserByEmail(req.body.email);
+        if(user == null || !(user instanceof User)) {
+            res.status(403).send({
+                message: "Invalid Credentials!"
+            });
+        } else {
+
         }
     }
 }
