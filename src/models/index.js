@@ -14,5 +14,6 @@ db.connection = sequelize;
 
 db.user = require('./users.js')(db.connection, db.Sequelize)
 db.vote = require('./votes.js')(db.connection, db.Sequelize)
+db.article = require('./articles.js')(db.connection, db.Sequelize)
 
 module.exports = db;

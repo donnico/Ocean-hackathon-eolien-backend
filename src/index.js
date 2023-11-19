@@ -23,6 +23,9 @@ app.use('/account', accountRouter);
 const voteRouter = require('./routes/voteRoutes');
 app.use('/vote', voteRouter);
 
+const articleRouter = require('./routes/articleRoutes');
+app.use('/article', articleRouter);
+
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
