@@ -9,6 +9,6 @@ router.use((req, res, next) => {
 })
 
 router.post('/submit', vote.submit)
-router.get('/results', vote.getVotes)
+router.get('/results/:userId', vote.getVotes)
 
 module.exports = router

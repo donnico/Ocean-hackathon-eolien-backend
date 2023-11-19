@@ -51,12 +51,11 @@ exports.submit = (req, res) => {
 }
 
 exports.getVotes = async (req, res) => {
-    console.log(req.body);
-    if (!req.body.userId) {
+    if (!req.params.userId) {
         res.status(400).send({message: 'Please send all the field required'});
         return;
     }
-    user = await findUserById(req.body.userId);
+    user = await findUserById(req.params.userId);
     if(user == null || !(user instanceof User)) {
         res.status(403).send({
             message: "Not Allowed"
